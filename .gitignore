@@ -5,3 +5,8 @@
 _site
 Gemfile.lock
 .jekyll-metadata
+
+404.html
+about.md
+index.md
+_posts
