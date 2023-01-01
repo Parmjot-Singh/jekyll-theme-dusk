@@ -5,6 +5,7 @@
 _site
 Gemfile.lock
 .jekyll-metadata
+jekyll-theme-dusk-*
 
 404.html
 about.md
