@@ -4,12 +4,3 @@
 .sass-cache
 _site
 Gemfile.lock
-.jekyll-metadata
-jekyll-theme-dusk-*
-
-404.html
-about.md
-home.md
-index.md
-_posts
-posts.md
