@@ -5,12 +5,18 @@ Gem::Specification.new do |spec|
   spec.version       = "0.1.0"
   spec.authors       = ["Parmjot Singh"]
   spec.email         = ["parmjotsinghrobot@gmail.com"]
-
-  spec.summary       = "TODO: Write a short summary, because Rubygems requires one."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "A dark theme with emphasis on elegance?"
+  spec.homepage      = "https://github.com/Parmjot-Singh/jekyll-theme-dusk/"
   spec.license       = "MIT"
+  spec.metadata = {
+    "bug_tracker_uri" => "#{spec.homepage}/issues",
+    "documentation_uri" => spec.homepage.to_s,
+    "homepage_uri" => spec.homepage.to_s,
+    "source_code_uri" => spec.homepage.to_s,
+  }
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
 
-  spec.add_runtime_dependency "jekyll", "~> 4.3"
+  spec.add_runtime_dependency "github-pages"
+  spec.add_runtime_dependency "webrick"
 end

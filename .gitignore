@@ -4,3 +4,7 @@
 .sass-cache
 _site
 Gemfile.lock
+index.md
+about.md
+assets/images
+_posts
