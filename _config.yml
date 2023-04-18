@@ -1,0 +1,42 @@
+# Files excluded from Jekyll builds - I've probably missed some stuff
+exclude:
+- about.md
+- LICENSE.txt
+- README.md
+- Gemfile
+- Gemfile.lock
+- jekyll-theme-dusk.gemspec
+- .jekyll-metadata
+
+# Installed Gems - no SEO because privacy :)
+plugins:
+- jekyll-paginate
+
+# Gem settings
+paginate: 5
+paginate_path: posts/page:num
+
+# Jekyll settings
+sass:
+  style: compressed
+permalink: pretty
+strict_front_matter: true # not sure if this goes here
+
+# Site settings
+encoding: utf-8
+lang: en
+title: "Dusk"
+
+#domain: parmjot-singh.github.io
+#url: https://parmjot-singh.github.io
+baseurl: ""
+repo: "https://github.com/parmjot-singh/jekyll-theme-dusk"
+
+# Load custom fonts
+fonts:
+  preconnect_urls:
+    - https://fonts.gstatic.com
+  fonts_urls:
+    # Display - 
+    # Content - Titillium Web
+    - https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap
