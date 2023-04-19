@@ -10,11 +10,6 @@ exclude:
 
 # Installed Gems - no SEO because privacy :)
 plugins:
-- jekyll-paginate
-
-# Gem settings
-paginate: 5
-paginate_path: posts/page:num
 
 # Jekyll settings
 sass:
@@ -37,6 +32,6 @@ fonts:
   preconnect_urls:
     - https://fonts.gstatic.com
   fonts_urls:
-    # Display - 
+    # Display - Chivo Mono
     # Content - Titillium Web
-    - https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap
+    - https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap
