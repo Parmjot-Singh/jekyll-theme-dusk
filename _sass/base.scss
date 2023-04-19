@@ -1,6 +1,6 @@
 @use "sass:math";
 
-/**//* CSS Reset - https://www.joshwcomeau.com/css/custom-css-reset/ *//**/
+/* CSS Reset - https://www.joshwcomeau.com/css/custom-css-reset/ */
 /* 1. Use a more-intuitive box-sizing model. */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -39,11 +39,11 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-/**//* Colours *//**/
+/* Colours */
 $primary-colour: #c7bc87;			// Light Gold
 $background-colour: #171717;		// Dark Gray
 
-/**//* Templates *//**/
+/* Templates */
 @mixin display {
 	font-family: 'Chivo Mono', monospace;
 	color: $primary-colour;
@@ -54,7 +54,7 @@ $background-colour: #171717;		// Dark Gray
 	color: white;
 }
 
-/**//* Fonts *//**/
+/* Fonts */
 /* Display */
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
 
