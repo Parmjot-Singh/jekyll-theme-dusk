@@ -68,13 +68,17 @@ p {
 
 h1 {
 	font-size: 3rem;
+	font-weight: 700;
+}
 
 h2 {
 	font-size: 1.4rem;
+	font-weight: 400;
 }
 
 h3 {
 	font-size: 1.2rem;
+	font-weight: 200;
 }
 
 h4 {
@@ -91,8 +95,6 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
 	@include display;
-	font-weight: bold;
-
 }
 
 /**//* Base Formatting *//**/
