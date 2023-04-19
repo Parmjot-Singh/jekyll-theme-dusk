@@ -97,7 +97,86 @@ h1, h2, h3, h4, h5, h6 {
 	@include display;
 }
 
-/**//* Base Formatting *//**/
+/* _include file formatting */
+/* header-home.html */
+header {
+	display: block;
+	height: 70vh;
+	width: 100%;
+	text-align: center;
+	/* center content in header */
+	position: relative;
+	/* debug */
+	background-color: blue;
+}
+
+#header-content {
+	display: inline-flex;
+	flex-direction: column;
+	/* center content in header */
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* debug */
+	background-color: black;
+}
+
+#quick-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	/* debug */
+	background-color: green;
+}
+
+.ql-container {
+	display: inline-flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	width: calc(100% / 3);
+	/* debug */
+	background-color: red;
+}
+
+.ql-icon {
+	background-color: pink;
+	display: inline-block;
+}
+
+.ql-icon img {
+	width: 10px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.quick-link {
+	background-color: purple;
+	display: inline-block;
+}
+/*
+.ql-icon {
+	background-color: pink;
+	display: inline-block;
+}
+
+.ql-icon img {
+	display: inline-block;
+	width: 10%;
+}
+*/
+/* symbols font config. This is here because I'm assuming that I will only use this here. :clueless: */
+.material-symbols-outlined {
+	font-variation-settings:
+	'FILL' 1,
+	'wght' 400,
+	'GRAD' 0,
+	'opsz' 48;
+}
+
+/* Base Formatting */
 html {
 	@include content;
 	background-color: $background-colour;
