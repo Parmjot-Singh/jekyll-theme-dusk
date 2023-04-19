@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-dusk"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.0" # Keep this at line 5 for GitHub release action
   spec.authors       = ["Parmjot Singh"]
   spec.email         = ["parmjotsinghrobot@gmail.com"]
   spec.summary       = "A dark theme with emphasis on elegance?"
@@ -17,6 +17,6 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
 
-  spec.add_runtime_dependency "github-pages"
+  spec.add_runtime_dependency "github-pages", '~> 228'
   spec.add_runtime_dependency "webrick"
 end
