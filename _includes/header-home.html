@@ -1,34 +1,39 @@
-<header>
-	<div id="header-content"> <!-- center div in middle, and allow text to remain above quick links 60% height of viewport -->
-		<div> <!-- text -->
-			<h1 class="page-title">{{ page.title }}</h1>
-			<h2 class="page-summary">{{ page.summary }}</h2>
+<div class="home"> <!-- this is so that the formatting can differentiate between header layouts. There has to be a better solution -->
+	<header>
+		<div id="header-content"> <!-- center div in middle, and allow text to remain above quick links 60% height of viewport -->
+			<div> <!-- text -->
+				<h1 class="page-title">{{ page.title }}</h1>
+				<h2 class="page-summary">{{ page.summary }}</h2>
+			</div>
+			<div id="quick-links"> <!-- quick links -->
+			
+				<a class="ql-container" href="{{ page.ql-1-link | default: '/about.html' }}">
+					<div class="ql-icon-container">
+						<img src="{{ page.ql-1-image | default: '/assets/images/about-icon.png' }}">
+					</div> <!-- end ql-icon-container -->
+					<div class="ql-text">
+						{{ page.ql-1-display | default: "About" }}
+					</div>
+					
+				</a>
+
+				<a class="ql-container" href="{{ page.ql-2-link | default: '/posts.html' }}">
+					<div class="ql-icon-container">
+						<img src="{{ page.ql-2-image | default: '/assets/images/posts-icon.png' }}">
+					</div> <!-- end ql-icon-container -->
+					<div class="ql-text">
+						{{ page.ql-2-display | default: "Posts" }}
+					</div> <!-- end ql-text -->
+				</a>
+				<a class="ql-container" href="{{ page.ql-3-link | default: '' }}">
+					<div class="ql-icon-container">
+						<img src="{{ page.ql-3-image | default: '/assets/images/github-logo.png' }}">
+					</div> <!-- end ql-icon-container -->
+					<div class="ql-text">
+						{{ page.ql-3-display | default: "GitHub" }}
+					</div> <!-- end ql-text -->
+				</a>
+			</div>
 		</div>
-		<div id="quick-links"> <!-- quick links -->
-			<div class="ql-container">
-				<div class="ql-icon">
-					{{ page.ql-1-image | default: "<img src='/assets/images/about-icon.png'>" }}
-				</div>
-				<a class="quick-link">
-					{{ page.ql-1-display | default: "About" }}
-				</a>
-			</div> <!-- end ql-container -->
-			<div class="ql-container">
-				<div class="ql-icon">
-					{{ page.ql-2-image | default: "<img src='/assets/images/posts-icon.png'>" }}
-				</div>
-				<a class="quick-link">
-					{{ page.ql-2-display | default: "Posts" }}
-				</a>
-			</div> <!-- end ql-container -->
-			<div class="ql-container">
-				<div class="ql-icon">
-					{{ page.ql-3-image | default: "<img src='/assets/images/github-logo.png'>" }}
-				</div>
-				<a class="quick-link">
-					{{ page.ql-3-display | default: "GitHub" }}
-				</a>
-			</div> <!-- end ql-container -->
-		</div>
-	</div>
-</header>
+	</header>
+</div>

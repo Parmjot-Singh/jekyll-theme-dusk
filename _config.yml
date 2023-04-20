@@ -1,6 +1,5 @@
 # Files excluded from Jekyll builds - I've probably missed some stuff
 exclude:
-- about.md
 - LICENSE.txt
 - README.md
 - Gemfile

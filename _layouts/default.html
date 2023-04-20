@@ -3,11 +3,7 @@
 	{%- include head.html -%}
 	<body>
 		{%- include navigation.html -%}
-		{% if page.layout == home %}
 		{%- include header-default.html -%}
-		{% else %}
-		{%- include header-home.html -%}
-		{% endif %}
 		<main>
 			{{ content }}
 		</main>
