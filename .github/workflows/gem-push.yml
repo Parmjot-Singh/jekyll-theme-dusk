@@ -20,8 +20,6 @@ jobs:
       with:
         ruby-version: '3.0' # Not needed with a .ruby-version file
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      run: |
-        bundle update
 
     - name: Publish to GPR
       run: |
@@ -52,3 +50,5 @@ jobs:
       with:
         file: "*.gem"
         release_name: $(awk '/version/ {print $3}' jekyll-theme-dusk.gemspec | cut -b 2-6)
+      run: |
+        ls
