@@ -2,6 +2,8 @@ name: Ruby Gem
 
 on:
   push:
+    paths:
+      - jekyll-theme-dusk.gemspec
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
