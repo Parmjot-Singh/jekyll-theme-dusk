@@ -1,10 +1,8 @@
 <div class="home"> <!-- this is so that the formatting can differentiate between header layouts. There has to be a better solution -->
 	<header>
 		<div id="header-content"> <!-- center div in middle, and allow text to remain above quick links 60% height of viewport -->
-			<div> <!-- text -->
-				<h1 class="page-title">{{ page.title }}</h1>
-				<h2 class="page-summary">{{ page.summary }}</h2>
-			</div>
+			<h1 class="page-title">{{ page.title }}</h1>
+			<h2 class="page-summary">{{ page.summary }}</h2>
 			<div id="quick-links"> <!-- quick links -->
 			
 				<a class="ql-container" href="{{ page.ql-1-link | default: '/about.html' }}">

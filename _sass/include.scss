@@ -1,6 +1,6 @@
 /* _include file formatting */
 /* header-home.html */
-.home {
+.home { /* this is to make sure that this code only affects the header-home.html file, and none of the other headers. */
         header {
                 display: block;
                 height: 70vh;
@@ -22,9 +22,8 @@
                 flex-direction: column;
                 width: 50%;
 
-                backdrop-filter: blur(10px);
-                background-color: rgba(0, 0, 0, 0.2);
-                box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.2);
+                background-color: rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
 
                 /* center content in header */
                 margin: 0;
@@ -80,4 +79,34 @@
         .ql-text {
                 display: inline-block;
         }
+}
+/* header-default.html */
+header {
+	display: block;
+	height: 50vh;
+	width: 100%;
+
+	/* parallax effect in background */
+	background-image: url("/assets/images/dusk-gray.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+
+    /* center content in header */
+    position: relative;
+}
+
+#header-content {
+	display: block;
+	width: 80vw;
+	
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
+    /* center content in header */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
