@@ -2,7 +2,6 @@
 @import "css-reset";
 @import "fonts";
 @import "include";
-@import "layouts";
 
 /* Colours */
 $primary-colour: #c7bc87;			// Light Gold
@@ -40,15 +39,20 @@ h3 {
 }
 
 h4 {
-	font-size: 3rem * 0.55;
+	font-size: 1.1rem;
+	font-weight: 200;
 }
 
 h5 {
-	font-size: 4rem * 0.4;
+	font-size: 1rem;
+	font-weight: 200;
+	font-style: italic;
 }
 
 h6 {
-	font-size: 4rem * 0.25;
+	font-size: 0.9rem;
+	font-weight: 200;
+	font-style: italic;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,4 +68,16 @@ a, a:hover, a:active, a:visited {
 html {
 	@include content;
 	background-color: $background-colour;
+}
+
+main {
+	width: 80vw;
+	margin:  30px auto 0 auto;
+}
+hr {
+	margin: 20px;
+}
+
+article {
+	margin: 20px 0;
 }
