@@ -1,81 +1,90 @@
 /* _include file formatting */
 /* header-home.html */
 .home { /* this is to make sure that this code only affects the header-home.html file, and none of the other headers. */
-        header {
-                display: block;
-                height: 70vh;
-                width: 100%;
-                text-align: center;
-                /* parallax effect in background */
-                background-image: url("/assets/images/dusk-gray.jpg");
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-position: center;
-                background-size: cover;
+    header {
+        display: block;
+        height: 70vh;
+        width: 100%;
+        text-align: center;
+        /* parallax effect in background */
+        background-image: url("/assets/images/dusk-gray.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
 
-                /* center content in header */
-                position: relative;
-        }
+        /* center content in header */
+        position: relative;
+    }
 
-        #header-content {
-                display: inline-flex;
-                flex-direction: column;
-                width: 50%;
-                /* center content in header */
-                margin: 0;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-        }
-
-        #quick-links {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-        }
-
-        .ql-container {
-                display: inline-flex;
-                justify-content: center;
-                margin: 0;
-                padding: 0;
-                width: calc(100% / 3);
-
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                margin: 1%;
-                border-radius: 4px;
-        }
-
-        .ql-container:hover {
-                background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
-        }
-
-        .ql-icon-container {
-                position: relative;
-                height: 100%;
-                aspect-ratio: 1/1;
-
-                img {
-                        padding: 15%;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        bottom: 0;
-                        right: 0;
-                }
-        }
-
-        .ql-icon-container:before {
-                content: "";
-                display: block;
-                padding-left: 100%;
-        }
-
-        .ql-text {
-                display: inline-block;
-        }
+    #header-content {
+        display: inline-flex;
+        flex-direction: column;
+        width: 50%;
+        /* center content in header */
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* ql formatting for home page only */
+	#quick-links {
+	    justify-content: space-evenly;
+	}
+    
+    .ql-container {
+        width: calc(100% / 3);
+        margin: 1%;
+    }
 }
+#quick-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.ql-container {
+    display: inline-flex;
+    justify-content: center;
+    width: 120px;
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.ql-container:hover {
+    background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
+}
+
+.ql-icon-container {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    img {
+        padding: 15%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.ql-icon-container:before {
+    content: "";
+    display: block;
+    padding-left: 100%;
+}
+
+.ql-text {
+    display: inline-block;
+}
+
+
 /* header-default.html */
 header {
 	display: block;
