@@ -7,3 +7,25 @@
   {% endfor %}
 </nav>
 -->
+<!--
+<nav>
+	{% if site.data.navigation %}
+		{% for item in site.data.navigation %}
+			<a class="ql-container" href="{{ item.link }}">
+				{% if item.image %}
+	                <div class="ql-image-container">
+    	                <img src="{{ item.image }}">
+        	        </div> comment end ql-icon-container ENDcomment
+       	        {% endif %}
+               	<div class="ql-text">
+	       	        {% if item.text %}
+                    	{{ item.text }}
+	                {% else %}
+	                	{{ item.link }}
+                	{% endif %}
+               	</div>
+            </a>
+		{% endfor %}
+	{% endif %}
+</nav>
+-->
