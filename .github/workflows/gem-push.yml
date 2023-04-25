@@ -2,8 +2,8 @@ name: Ruby Gem
 
 on:
   push:
-    #paths:
-    #  - jekyll-theme-dusk.gemspec
+    paths:
+      - jekyll-theme-dusk.gemspec
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
@@ -30,7 +30,7 @@ jobs:
         chmod 0600 $HOME/.gem/credentials
         printf -- "---\n:rubygems_api_key: ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
         gem build *.gemspec
-        #gem push *.gem
+        gem push *.gem
       env:
         GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_AUTH_TOKEN}}"
 
@@ -39,5 +39,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       with:
+        tags: true
+        draft: false
         file: "*.gem"
-        default_release_name: $(awk '/version/ {print $3}' jekyll-theme-dusk.gemspec | cut -b 2-6)
