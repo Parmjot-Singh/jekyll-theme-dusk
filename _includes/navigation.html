@@ -1,34 +1,3 @@
-<!--
-<nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link }}">
-      {{ item.name }}
-    </a>
-  {% endfor %}
-</nav>
--->
-<!--
-<nav>
-	{%- if site.data.navigation -%}
-		{%- for item in site.data.navigation -%}
-			<a class="ql-container" href="{{ item.link }}">
-				{%- if item.image -%}
-	                <div class="ql-icon-container">
-    	                <img src="{{ item.image }}">
-        	        </div>
-       	        {%- endif -%}
-               	<div class="ql-text">
-	       	        {%- if item.name -%}
-                    	{{ item.name }}
-	                {%- else %}
-	                	{{ item.link }}
-                	{%- endif -%}
-               	</div>
-            </a>
-		{%- endfor -%}
-	{%- endif -%}
-</nav>
--->
 <script>
 	/* Set the width of the side navigation to 250px */
 	function openNav() {
@@ -47,15 +16,18 @@
 			{%- for item in site.data.navigation -%}
 				<a href="{{ item.link }}">
 	               	<div>
-		       	        {%- if item.name -%}
-	                    	{{ item.name }}
-		                {%- else %}
-		                	{{ item.link }}
-	                	{%- endif -%}
+	               		{%- if item.icon -%}
+	               			<img src="{{ item.icon }}" class="nav-links-icon">
+	               		{%- endif -%}
 	               	</div>
+	       	        {%- if item.name -%}
+                    	{{ item.name }}
+	                {%- else %}
+	                	{{ item.link }}
+                	{%- endif -%}
 	            </a>
 			{%- endfor -%}
 		{%- endif -%}
 	</div>
-	<span onclick="openNav()" class="open-nav">Navigation</span>
+	<span onclick="openNav()" id="open-nav">Navigation</span>
 </nav>
