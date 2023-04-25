@@ -98,24 +98,27 @@ header {
 	top: 0;
 	right: 0;
 	overflow-x: hidden;
-	transition: 0.5s; /* for animation */
+	transition: 0.5s;
 
 	text-align: center;
 	/* debug */
 	background-color: rgba(0, 0, 0, 0.6);
 
 	a {
-		padding: 8px;
-		display: block;
-		transition: 0.3s;
-		height: 40px;
+		display: flex;
+		justify-content: space-between;
+		
+		padding: 11px;
+		transition: 0.5s;
+		height: 45px;
+		width: 100%;
 	}
 
 	.closebtn {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 40px;
+		width: 45px;
 	}
 
 	a:hover, .closebtn:hover {
@@ -123,22 +126,29 @@ header {
 	}
 }
 
-.open-nav {
+#open-nav {
 	position: fixed;
 	top: 7px;
 	right: 7px;
 	z-index: 1;
 	display: block;
 
+	transition: 0.5s;
 	cursor: pointer;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-radius: 4px;
 	padding: 3px 10px;
 }
 
-.open-nav:hover {
+#open-nav:hover {
 	background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
 }
+
+.nav-links-icon {
+	width: 24px;
+	display: inline-block;
+}
+
 /* footer.html */
 footer {
 	display: flex;

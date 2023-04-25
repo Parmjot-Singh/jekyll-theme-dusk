@@ -2,11 +2,13 @@
 	/* Set the width of the side navigation to 250px */
 	function openNav() {
 		document.getElementById("sideNav").style.width = "200px";
+		document.getElementById("open-nav").style.right = "-100px";
 	}
 	
 	/* Set the width of the side navigation to 0 */
 	function closeNav() {
 		document.getElementById("sideNav").style.width = "0";
+		document.getElementById("open-nav").style.right = "7px";
 	} 
 </script>
 <nav>
@@ -15,7 +17,7 @@
 		{%- if site.data.navigation -%}
 			{%- for item in site.data.navigation -%}
 				<a href="{{ item.link }}">
-	               	<div>
+	               	<div style="width: 24px;"> <!-- even spacing -->
 	               		{%- if item.icon -%}
 	               			<img src="{{ item.icon }}" class="nav-links-icon">
 	               		{%- endif -%}
@@ -25,6 +27,7 @@
 	                {%- else %}
 	                	{{ item.link }}
                 	{%- endif -%}
+	               	<div style="width: 24px;"> <!-- even spacing --> </div>
 	            </a>
 			{%- endfor -%}
 		{%- endif -%}
