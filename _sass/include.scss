@@ -126,17 +126,22 @@ header {
 	text-align: center;
 	/* debug */
 	background-color: rgba(0, 0, 0, 0.6);
-}
 
-.sidenav a {
-	padding: 8px;
-	display: block;
-	transition: 0.3s;
-}
+	a {
+		padding: 8px;
+		display: block;
+		transition: 0.3s;
+		height: 40px;
+	}
 
-.sidenav .closebtn {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: red;
+	.closebtn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 40px;
+	}
+
+	a:hover, .closebtn:hover {
+		background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
+	}
 }
