@@ -37,7 +37,7 @@ jobs:
     - name: Publish to GitHub releases
       uses: xresloader/upload-to-github-release@main
       env:
-        GITUHB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITUHB_TOKEN: ${{ secrets.GH_TOKEN }}
       with:
         file: "*.gem"
         default_release_name: $(awk '/version/ {print $3}' jekyll-theme-dusk.gemspec | cut -b 2-6)
