@@ -139,3 +139,25 @@ header {
 .open-nav:hover {
 	background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
 }
+/* footer.html */
+footer {
+	display: flex;
+	justify-content: space-between;
+	background: linear-gradient(100deg, #202020, #323232);
+	padding: 3% 10%;
+	margin-top: 60px;
+}
+
+#footer-links {
+	display: inline-flex;
+	flex-direction: column;
+}
+
+#blatant-advertising {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	text-align: right;
+	font-size: 85%;
+	width: 50%;
+	opacity: 50%;}
