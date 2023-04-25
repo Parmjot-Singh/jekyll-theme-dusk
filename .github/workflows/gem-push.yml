@@ -39,5 +39,5 @@ jobs:
       env:
         GITUHB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: *.gem
+        file: "*.gem"
         default_release_name: $(awk '/version/ {print $3}' jekyll-theme-dusk.gemspec | cut -b 2-6)
