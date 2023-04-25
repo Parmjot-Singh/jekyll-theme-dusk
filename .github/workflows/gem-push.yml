@@ -22,10 +22,11 @@ jobs:
       with:
         ruby-version: '3.0' # Not needed with a .ruby-version file
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - uses: xresloader/upload-to-github-release@main
+    - uses: meeDamian/github-release@2.0
       with:
-        file: "*.gem"
-        default_release_name: $(awk '/version/ {print $3}' jekyll-theme-dusk.gemspec | cut -b 2-6)
+        files: "*.gem"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        name: $(awk '/version/ {print $3}' jekyll-theme-dusk.gemspec | cut -b 2-6)
 
     - name: Publish to RubyGems
       run: |
@@ -46,5 +47,3 @@ jobs:
         printf -- "---\n:rubygems_api_key: ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
         gem build *.gemspec
         gem push *.gem
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
