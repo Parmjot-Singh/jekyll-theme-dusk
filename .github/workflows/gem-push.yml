@@ -6,9 +6,6 @@ on:
       - jekyll-theme-dusk.gemspec
     tags:
       - '*'
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
   build:
