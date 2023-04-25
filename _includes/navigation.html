@@ -9,23 +9,53 @@
 -->
 <!--
 <nav>
-	{% if site.data.navigation %}
-		{% for item in site.data.navigation %}
+	{%- if site.data.navigation -%}
+		{%- for item in site.data.navigation -%}
 			<a class="ql-container" href="{{ item.link }}">
-				{% if item.image %}
-	                <div class="ql-image-container">
+				{%- if item.image -%}
+	                <div class="ql-icon-container">
     	                <img src="{{ item.image }}">
-        	        </div> comment end ql-icon-container ENDcomment
-       	        {% endif %}
+        	        </div>
+       	        {%- endif -%}
                	<div class="ql-text">
-	       	        {% if item.text %}
-                    	{{ item.text }}
-	                {% else %}
+	       	        {%- if item.name -%}
+                    	{{ item.name }}
+	                {%- else %}
 	                	{{ item.link }}
-                	{% endif %}
+                	{%- endif -%}
                	</div>
             </a>
-		{% endfor %}
-	{% endif %}
+		{%- endfor -%}
+	{%- endif -%}
 </nav>
 -->
+<script>
+	/* Set the width of the side navigation to 250px */
+	function openNav() {
+		document.getElementById("sideNav").style.width = "200px";
+	}
+	
+	/* Set the width of the side navigation to 0 */
+	function closeNav() {
+		document.getElementById("sideNav").style.width = "0";
+	} 
+</script>
+<nav>
+	<div id="sideNav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		{%- if site.data.navigation -%}
+			{%- for item in site.data.navigation -%}
+				<a href="{{ item.link }}">
+	               	<div>
+		       	        {%- if item.name -%}
+	                    	{{ item.name }}
+		                {%- else %}
+		                	{{ item.link }}
+	                	{%- endif -%}
+	               	</div>
+	            </a>
+			{%- endfor -%}
+		{%- endif -%}
+	</div>
+	<span onclick="openNav()" style="cursor:pointer">open</span>
+</nav>

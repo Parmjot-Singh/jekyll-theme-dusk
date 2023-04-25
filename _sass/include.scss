@@ -112,3 +112,31 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.sidenav {
+	height: 100%;
+	width: 0; /* changed with JavaScript */
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	overflow-x: hidden;
+	transition: 0.5s; /* for animation */
+
+	text-align: center;
+	/* debug */
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sidenav a {
+	padding: 8px;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: red;
+}

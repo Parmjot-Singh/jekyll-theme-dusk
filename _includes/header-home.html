@@ -1,36 +1,10 @@
 <div class="home"> <!-- this is so that the formatting can differentiate between header layouts. There has to be a better solution -->
+	{%- include navigation.html -%}
 	<header>
 		<div id="header-content"> <!-- center div in middle, and allow text to remain above quick links 60% height of viewport -->
 			<h1 class="page-title">{{ page.title }}</h1>
 			<h2 class="page-summary">{{ page.summary }}</h2>
-			<div id="quick-links"> <!-- quick links -->
 			
-				<a class="ql-container" href="{{ page.ql-1-link | default: '/about.html' }}">
-					<div class="ql-icon-container">
-						<img src="{{ page.ql-1-image | default: '/assets/images/about-icon.png' }}">
-					</div> <!-- end ql-icon-container -->
-					<div class="ql-text">
-						{{ page.ql-1-display | default: "About" }}
-					</div>
-				</a>
-
-				<a class="ql-container" href="{{ page.ql-2-link | default: '/blog.html' }}">
-					<div class="ql-icon-container">
-						<img src="{{ page.ql-2-image | default: '/assets/images/blog-icon.png' }}">
-					</div> <!-- end ql-icon-container -->
-					<div class="ql-text">
-						{{ page.ql-2-display | default: "Blog" }}
-					</div> <!-- end ql-text -->
-				</a>
-				<a class="ql-container" href="{{ page.ql-3-link | default: '' }}">
-					<div class="ql-icon-container">
-						<img src="{{ page.ql-3-image | default: '/assets/images/github-logo.png' }}">
-					</div> <!-- end ql-icon-container -->
-					<div class="ql-text">
-						{{ page.ql-3-display | default: "GitHub" }}
-					</div> <!-- end ql-text -->
-				</a>
-			</div>
 		</div>
 	</header>
 </div>
