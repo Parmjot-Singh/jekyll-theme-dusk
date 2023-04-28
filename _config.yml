@@ -6,6 +6,7 @@ exclude:
 - Gemfile.lock
 - jekyll-theme-dusk.gemspec
 - .jekyll-metadata
+- .readme
 
 # Installed Gems - no SEO because privacy :)
 plugins:

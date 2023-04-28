@@ -1,10 +1,6 @@
 # jekyll-theme-dusk
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
-
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
+This theme was built for GitHub Pages.
 
 ## Installation
 
@@ -30,20 +26,47 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+This theme has many features in it. They are written here so that it is easier to use them.
+
+- ### Navigation Menu
+
+To edit entries in the navigation menu, edit;
+```
+_data/navigation.yml
+```
+and add your pages, and icons if you want them.
+Here is an example:
+```
+- name: Home
+  icon: 
+  link: /
+- name: About
+  icon: /assets/images/about-icon.png
+  link: /about.html
+- name: Blog
+  icon: /assets/images/blog-icon.png
+  link: /blog.html
+```
+![Editing the navigation menu, as a GIF](.readme/edit-nav.gif "Edit the navigation menu")
+
+- ### Home Page
+
+To edit the home page, you need to include a title for the page, and a small summary.
+This can be found in the front matter. Here is an example.
+```
+layout: home
+permalink: /
+title: "Dusk"
+summary: "Dusk is a theme built for GitHub Pages."
+```
+
+- ### Blog Page
+
+This page contains all your posts that you have made on your website. All you need to do is just to make some posts, and then they will all appear there.
 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/Parmjot-Singh/jekyll-theme-dusk. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-dusk.gemspec` accordingly.
 
 ## License
 
