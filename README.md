@@ -48,6 +48,7 @@ Here is an example:
   link: /blog.html
 ```
 ![Editing the navigation menu, as a GIF](.readme/edit-nav.gif "Edit the navigation menu")
+Crunchy gif :)
 
 - ### Home Page
 
