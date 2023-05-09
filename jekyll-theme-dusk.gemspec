@@ -2,10 +2,10 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-dusk"
-  spec.version       = "0.3.0" # Keep this at line 5 for GitHub release action
+  spec.version       = "0.3.1" # Keep this at line 5 for GitHub release action
   spec.authors       = ["Parmjot Singh"]
   spec.email         = ["parmjotsinghrobot@gmail.com"]
-  spec.summary       = "A dark theme with emphasis on elegance?"
+  spec.summary       = "A dark theme built for GitHub Pages, with emphasis on elegance?"
   spec.homepage      = "https://github.com/Parmjot-Singh/jekyll-theme-dusk/"
   spec.license       = "MIT"
   spec.metadata = {
