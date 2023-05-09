@@ -51,7 +51,7 @@ This theme has many features in it. They are written here so that it is easier t
     icon: /assets/images/blog-icon.png
     link: /blog.html
   ```
-  ![Editing the navigation menu, as a GIF](.readme/edit-nav.gif "Edit the navigation menu")
+  ![Editing the navigation menu, as a GIF](.readme/edit-nav.gif "Edit the navigation menu")  
   Crunchy gif :)
 
 - ### Image Galleries
