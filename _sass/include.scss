@@ -101,7 +101,6 @@ header {
 	transition: 0.5s;
 
 	text-align: center;
-	/* debug */
 	background-color: rgba(0, 0, 0, 0.6);
 
 	a {
@@ -127,6 +126,7 @@ header {
 }
 
 #open-nav {
+	background-color: rgba(0, 0, 0, 0.6);
 	position: fixed;
 	top: 7px;
 	right: 7px;
