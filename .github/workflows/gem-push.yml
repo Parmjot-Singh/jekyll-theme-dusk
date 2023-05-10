@@ -38,9 +38,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         ref: ${{ github.event.push.ref }}
       run: |
-        tag=${ref##*/}
 
-        gh release create "$tag" *.gem \
+        gh release create ${{ github.ref_name }} *.gem \
             --repo="$GITHUB_REPOSITORY" \
             --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
             --generate-notes
