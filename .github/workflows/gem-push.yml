@@ -44,9 +44,6 @@ jobs:
 
     - name: Publish to RubyGems
       run: |
-        sudo apt-get update
-        sudo apt-get install tree -y
-        tree
         gem push *.gem
       env:
         GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_AUTH_TOKEN}}"
