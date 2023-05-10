@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build + Publish
+    name: Build
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -22,22 +22,40 @@ jobs:
         ruby-version: '3.0' # Not needed with a .ruby-version file
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-    - name: Publish to RubyGems
+    - name: Build Gem
       run: |
         mkdir -p $HOME/.gem
         touch $HOME/.gem/credentials
         chmod 0600 $HOME/.gem/credentials
         printf -- "---\n:rubygems_api_key: ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
         gem build *.gemspec
+      env:
+        GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_AUTH_TOKEN}}"
+
+  release:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+        bundler-cache: true
+
+    - name: Publish to RubyGems
+      run: |
         gem push *.gem
       env:
         GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_AUTH_TOKEN}}"
 
-    - name: Publish to GitHub releases
-      uses: xresloader/upload-to-github-release@main
+    - name: Publish to GitHub Releases
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      with:
-        tags: true
-        draft: false
-        file: "*.gem"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ref: ${{ github.event.push.ref }}
+      run: |
+        tag=${ref##*/}
+
+        gh release create "$tag" *.gem \
+            --repo="$GITHUB_REPOSITORY" \
+            --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
+            --generate-notes
