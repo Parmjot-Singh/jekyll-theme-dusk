@@ -20,41 +20,40 @@ $background-colour: #171717;		// Dark Gray
 	color: white;
 }
 
-p {
 html {
 	@include content;
-	font-size:  0.8rem;
 	transition: 0.5s;
+	font-size: min(max(1rem, 2vw), 18px);
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: min(max(3rem, 9vw), 50px);
 	font-weight: 700;
 }
 
 h2 {
-	font-size: 1.4rem;
+	font-size: min(max(2.7rem, 8vw), 30px);
 	font-weight: 400;
 }
 
 h3 {
-	font-size: 1.2rem;
+	font-size: min(max(2.4rem, 7vw), 25px);
 	font-weight: 200;
 }
 
 h4 {
-	font-size: 1.1rem;
+	font-size: min(max(2.1rem, 6vw), 20px);
 	font-weight: 200;
 }
 
 h5 {
-	font-size: 1rem;
+	font-size: min(max(1.5rem, 4vw), 18px);
 	font-weight: 200;
 	font-style: italic;
 }
 
 h6 {
-	font-size: 0.9rem;
+	font-size: min(max(0.9rem, 3vw), 16px);
 	font-weight: 200;
 	font-style: italic;
 }
