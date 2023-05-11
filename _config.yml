@@ -13,7 +13,7 @@ exclude:
 - _site
 
 # Installed Gems - no SEO because privacy :)
-plugins:
+#plugins:
 
 # Jekyll settings
 sass:
