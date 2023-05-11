@@ -7,6 +7,10 @@ exclude:
 - jekyll-theme-dusk.gemspec
 - .jekyll-metadata
 - .readme
+- assets/images/gallery
+- _data/galleries
+- _posts/
+- _site
 
 # Installed Gems - no SEO because privacy :)
 plugins:
@@ -19,7 +23,6 @@ strict_front_matter: true # not sure if this goes here
 
 # Site settings
 encoding: utf-8
-lang: en
 title: "Dusk"
 
 #domain: parmjot-singh.github.io
