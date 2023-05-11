@@ -21,8 +21,10 @@ $background-colour: #171717;		// Dark Gray
 }
 
 p {
+html {
 	@include content;
 	font-size:  0.8rem;
+	transition: 0.5s;
 }
 
 h1 {
