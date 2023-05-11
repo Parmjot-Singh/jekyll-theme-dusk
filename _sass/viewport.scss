@@ -1,0 +1,15 @@
+@media (min-aspect-ratio: 1/1) {
+	.image-gallery {
+		li {
+			height: 30vh;
+		}
+	}
+}
+
+@media (max-aspect-ratio: 1/1) {
+	.image-gallery {
+		li {
+			height: 20vh;
+		}
+	}
+}

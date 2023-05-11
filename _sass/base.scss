@@ -3,6 +3,7 @@
 @import "fonts";
 @import "include";
 @import "layout";
+@import "viewport";
 
 /* Colours */
 $primary-colour: #c7bc87;			// Light Gold
@@ -98,7 +99,6 @@ article {
 	}
 
 	li {
-		height: 40vh;
 		flex-grow: 1;
 	}
 
