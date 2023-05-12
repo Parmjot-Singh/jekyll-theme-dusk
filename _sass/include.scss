@@ -162,6 +162,9 @@ footer {
 #footer-links {
 	display: inline-flex;
 	flex-direction: column;
+	a, a:hover, a:active, a:visited {
+		color: #c7bc87;
+	}
 }
 
 #blatant-advertising {
