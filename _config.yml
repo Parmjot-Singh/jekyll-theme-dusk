@@ -17,7 +17,7 @@ exclude:
 
 # Jekyll settings
 sass:
-  style: compressed
+  style: expanded
 permalink: pretty
 strict_front_matter: true # not sure if this goes here
 
