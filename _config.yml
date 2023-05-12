@@ -30,14 +30,3 @@ description: "A dark coloured Jekyll theme compatible with GitHub Pages, with em
 #url: https://parmjot-singh.github.io
 baseurl: ""
 repo: "https://github.com/parmjot-singh/jekyll-theme-dusk"
-
-# Load custom fonts
-fonts:
-  preconnect_urls:
-    - https://fonts.gstatic.com
-  fonts_urls:
-    # Display - Chivo Mono
-    # Content - Titillium Web
-    # Second link - Material Symbols
-    - https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap
-    - https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200
