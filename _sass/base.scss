@@ -23,37 +23,37 @@ $background-colour: #171717;		// Dark Gray
 html {
 	@include content;
 	transition: 0.5s;
-	font-size: min(max(1rem, 2vw), 18px);
+	font-size: min(max(16px, 2vw), 18px);
 }
 
 h1 {
-	font-size: min(max(3rem, 9vw), 50px);
+	font-size: min(max(2.5rem, 9vw), 50px);
 	font-weight: 700;
 }
 
 h2 {
-	font-size: min(max(2.7rem, 8vw), 30px);
+	font-size: min(max(2rem, 6vw), 25px);
 	font-weight: 400;
 }
 
 h3 {
-	font-size: min(max(2.4rem, 7vw), 25px);
+	font-size: min(max(1.8rem, 5vw), 22px);
 	font-weight: 200;
 }
 
 h4 {
-	font-size: min(max(2.1rem, 6vw), 20px);
+	font-size: min(max(1.6rem, 4vw), 19px);
 	font-weight: 200;
 }
 
 h5 {
-	font-size: min(max(1.5rem, 4vw), 18px);
+	font-size: min(max(1.4rem, 3vw), 17.5px);
 	font-weight: 200;
 	font-style: italic;
 }
 
 h6 {
-	font-size: min(max(0.9rem, 3vw), 16px);
+	font-size: min(max(1.1rem, 2vw), 16px);
 	font-weight: 200;
 	font-style: italic;
 }

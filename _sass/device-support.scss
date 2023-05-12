@@ -5,6 +5,10 @@
 			height: 15vh;
 		}
 	}
+
+	#header-content {
+		width: 80vw;
+	}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -13,6 +17,9 @@
 		li {
 			height: 20vh;
 		}
+	}
+	#header-content {
+		width: 80vw;
 	}
 }
 
@@ -23,10 +30,18 @@
 			height: 30vh;
 		}
 	}
+	#header-content {
+		width: 80vw;
+	}
+	
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+	#header-content {
+		width: 50vw;
+	}
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
