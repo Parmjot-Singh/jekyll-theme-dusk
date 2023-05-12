@@ -4,21 +4,7 @@
 @import "include";
 @import "layout";
 @import "device-support";
-
-/* Colours */
-$primary-colour: #c7bc87;			// Light Gold
-$background-colour: #171717;		// Dark Gray
-
-/* Templates */
-@mixin display {
-	font-family: 'Chivo Mono', monospace;
-	color: $primary-colour;
-}
-
-@mixin content {
-	font-family: 'Titillium Web', sans-serif;
-	color: white;
-}
+@import "variables.scss";
 
 html {
 	@include content;
