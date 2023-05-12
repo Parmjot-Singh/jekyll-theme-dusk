@@ -104,6 +104,7 @@ This theme has many features in it. They are written here so that it is easier t
   title: "Dusk"
   summary: "Dusk is a theme built for GitHub Pages."
   ```
+  You do not need the title or summary variables, as the variables ```{{ site.title }}``` and ```{{ site.description }}``` can be set in your ```_config.yml``` file as well, which is the default. This does override the other though.
 
 - ### Blog Page
 

@@ -2,7 +2,7 @@
 layout: home
 permalink: /
 title: "Dusk"
-summary: "Dusk is a theme built for GitHub Pages."
+summary: "A dark coloured Jekyll theme compatible with GitHub Pages, with emphasis on elegance?"
 ---
 # Heading level 1
 ## Heading level 2

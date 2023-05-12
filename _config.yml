@@ -24,6 +24,7 @@ strict_front_matter: true # not sure if this goes here
 # Site settings
 encoding: utf-8
 title: "Dusk"
+description: "A dark coloured Jekyll theme compatible with GitHub Pages, with emphasis on elegance?"
 
 #domain: parmjot-singh.github.io
 #url: https://parmjot-singh.github.io
