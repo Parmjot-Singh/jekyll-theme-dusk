@@ -72,30 +72,9 @@ body {
 }
 
 header {
-    flex-shrink: 0;
-}
-
-/* _include file formatting */
-/* header-home.html */
-.home { /* this is to make sure that this code only affects the header-home.html file, and none of the other headers. */
-    header {
-        height: 50vh;
-        text-align: center;
-    }
-
-    #header-content {
-        display: inline-flex;
-        flex-direction: column;
-
-        h1 {
-            font-size: min(max(3rem, 9vw), 70px);
-        }
-    }
-}
-
-header {
 	display: block;
 	height: 30vh;
+    flex-shrink: 0; /* this is so that the flex layout doesnt shrink the header when the window isn't tall enough to fit everything */
 
 	/* parallax effect in background */
 	background-image: url("/assets/images/dusk-gray.jpg");
@@ -108,7 +87,12 @@ header {
     position: relative;
 }
 
-#header-content {
+.header--home {
+    height: 50vh;
+    text-align: center;
+}
+
+.header-content {
 	display: block;
 	width: 80vw;
     /* center content in header */
