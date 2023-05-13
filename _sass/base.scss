@@ -1,47 +1,14 @@
 @use "sass:math";
 @import "css-reset";
-@import "fonts";
 @import "include";
 @import "layout";
+@import "text";
 @import "device-support";
 @import "variables.scss";
 
 html {
 	@include content;
 	transition: 0.5s;
-	font-size: min(max(16px, 2vw), 18px);
-}
-
-h1 {
-	font-size: min(max(2.5rem, 9vw), 50px);
-	font-weight: 700;
-}
-
-h2 {
-	font-size: min(max(2rem, 6vw), 25px);
-	font-weight: 400;
-}
-
-h3 {
-	font-size: min(max(1.8rem, 5vw), 22px);
-	font-weight: 200;
-}
-
-h4 {
-	font-size: min(max(1.6rem, 4vw), 19px);
-	font-weight: 200;
-}
-
-h5 {
-	font-size: min(max(1.4rem, 3vw), 17.5px);
-	font-weight: 200;
-	font-style: italic;
-}
-
-h6 {
-	font-size: min(max(1.1rem, 2vw), 16px);
-	font-weight: 200;
-	font-style: italic;
 }
 
 h1, h2, h3, h4, h5, h6 {

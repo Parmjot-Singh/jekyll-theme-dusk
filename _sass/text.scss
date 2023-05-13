@@ -1,0 +1,44 @@
+/* Fonts */
+/* Display */
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+/* Content */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+/* Text formatting */
+html {
+    transition: 0.5s;
+    font-size: min(max(16px, 2vw), 18px);
+}
+
+h1 {
+    font-size: min(max(2.5rem, 9vw), 50px);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: min(max(2rem, 6vw), 25px);
+    font-weight: 400;
+}
+
+h3 {
+    font-size: min(max(1.8rem, 5vw), 22px);
+    font-weight: 200;
+}
+
+h4 {
+    font-size: min(max(1.6rem, 4vw), 19px);
+    font-weight: 200;
+}
+
+h5 {
+    font-size: min(max(1.4rem, 3vw), 17.5px);
+    font-weight: 200;
+    font-style: italic;
+}
+
+h6 {
+    font-size: min(max(1.1rem, 2vw), 16px);
+    font-weight: 200;
+    font-style: italic;
+}
