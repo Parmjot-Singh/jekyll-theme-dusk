@@ -38,11 +38,13 @@ article {
 
 /* Custom Classes */
 .image-gallery {
+	margin: 10px 0;
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 		list-style: none;
 		padding-left: 0;
+		margin: 0.75vmin;
 
 		&:after {
 			content:'';
@@ -53,6 +55,7 @@ article {
 
 	li {
 		flex-grow: 1;
+		margin: 0.75vmin;
 	}
 
 	img {
@@ -60,6 +63,7 @@ article {
 		min-width: 100%;
 		object-fit: cover;
 		vertical-align: bottom;
+		border-radius: 0.5vmin;
 	}
 }
 
