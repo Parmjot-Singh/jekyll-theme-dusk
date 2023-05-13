@@ -1,5 +1,4 @@
 - name: Home
-  icon: 
   link: /
 - name: About
   icon: /assets/images/about-icon.png
@@ -7,4 +6,3 @@
 - name: Blog
   icon: /assets/images/blog-icon.png
   link: /blog.html
-

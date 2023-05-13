@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
-	{%- include head.html -%}
-	<body>
-		{%- include header-post.html -%}
-		<main>
-			<h2>{{ page.title }}</h2>
-			<h5>{{ page.author }}</h5>
-			<p>{{ page.date | date_to_string }}</p>
-			<article>
-				{{ content }}
-			</article>
-		</main>
-		{%- include footer.html -%}
-	</body>
+    {%- include head.html -%}
+    <body>
+        {%- include header-post.html -%}
+        <main>
+            <h2>{{ page.title }}</h2>
+            <h4>{{ page.author }}</h4>
+            <p>{{ page.date | date_to_string }}</p>
+            <article>
+                {{ content }}
+            </article>
+        </main>
+        {%- include footer.html -%}
+    </body>
 </html>

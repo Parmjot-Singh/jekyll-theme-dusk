@@ -1,7 +1,7 @@
-<header class="header--home">
-	{%- include navigation.html -%}
-	<div class="header-content"> <!-- center div in middle, and allow text to remain above quick links 60% height of viewport -->
-		<h1 class="page-title">{{ page.title | site.title }}</h1>
-		<h3 class="page-summary">{{ page.summary | default: site.description }}</h3>
-	</div>
+<header id="header--home">
+    {%- include navigation.html -%}
+    <div id="header__content"> <!-- center div in middle, and allow text to remain above quick links 60% height of viewport -->
+        <h1 class="page-title">{{ page.title | site.title }}</h1>
+        <h3 class="page-summary">{{ page.summary | default: site.description }}</h3>
+    </div>
 </header>

@@ -1,20 +1,20 @@
 <footer>
-	{%- if site.data.navigation -%}
-		<div id="footer-links">
-			{%- for item in site.data.navigation -%}
-				<a href="{{ item.link }}">
-					<div>
-						{%- if item.name -%}
-							{{ item.name }}
-	               		{%- else %}
-	                   	    {{ item.link }}
-	               		{%- endif -%}
-					</div>
-				</a>
-		    {%- endfor -%}
-	    </div>
-	    <div id="blatant-advertising">
-	    	This website is using Dusk, a theme built with ❤️ for GitHub pages, by Parmjot Singh.
-	    </div>
-	{%- endif -%}
+    {%- if site.data.navigation -%}
+        <div id="footer__links">
+            {%- for item in site.data.navigation -%}
+                <a href="{{ item.link }}">
+                    <div>
+                        {%- if item.name -%}
+                            {{ item.name }}
+                        {%- else %}
+                            {{ item.link }}
+                        {%- endif -%}
+                    </div>
+                </a>
+            {%- endfor -%}
+        </div>
+        <div id="footer__watermark">
+            This website is using Dusk, a theme built with ❤️ for GitHub pages, by Parmjot Singh.
+        </div>
+    {%- endif -%}
 </footer>

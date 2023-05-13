@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
-	{%- include head.html -%}
-	<body>
-		{%- include header-default.html -%}
-			<main>
-			{{ content }}
-			<hr>
-			<h2>Latest Posts</h2>
-			<ul>
-				{%- for post in site.posts -%}
-					<li>
-						<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-						{%- if post.author -%} - {{ post.author }}{%- endif -%}
-						{{ post.excerpt }}
-					</li>
-				{%- endfor -%}
-			</ul>
-		</main>
-		{%- include footer.html -%}
-	</body>
+    {%- include head.html -%}
+    <body>
+        {%- include header-default.html -%}
+        <main>
+            {{ content }}
+            <hr>
+            <h2>Latest Posts</h2>
+            <ul>
+                {%- for post in site.posts -%}
+                    <li>
+                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                        {%- if post.author -%} - {{ post.author }}{%- endif -%}
+                        {{ post.excerpt }}
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </main>
+        {%- include footer.html -%}
+    </body>
 </html>

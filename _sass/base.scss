@@ -1,104 +1,48 @@
-@use "sass:math";
 @import "css-reset";
 @import "text";
 @import "device-support";
 @import "variables.scss";
 
-html {
-	@include content;
-	transition: 0.5s;
-}
-
 h1, h2, h3, h4, h5, h6 {
-	@include display;
+    @include display;
 }
 
 a, a:hover, a:active, a:visited {
-	color: white;
-	text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 /* Base Formatting */
 html {
-	@include content;
-	background-color: $background-colour;
-}
-
-main {
-    width: 80vw;
-	margin:  30px auto 0 auto;
-}
-hr {
-	margin: 20px;
-}
-
-article {
-	margin: 20px 0;
-}
-
-/* Custom Classes */
-.image-gallery {
-	margin: 10px 0;
-	ul {
-		display: flex;
-		flex-wrap: wrap;
-		list-style: none;
-		padding-left: 0;
-		margin: 0.75vmin;
-
-		&:after {
-			content:'';
-			display:block;
-			flex-grow: 10;
-		}
-	}
-
-	li {
-		flex-grow: 1;
-		margin: 0.75vmin;
-	}
-
-	img {
-		max-height: 100%;
-		min-width: 100%;
-		object-fit: cover;
-		vertical-align: bottom;
-		border-radius: 0.5vmin;
-	}
-}
-
-/* layout */
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
+    @include content;
+    background-color: $background-colour;
+    transition: 0.5s;
 }
 
 header {
-	display: block;
-	height: 30vh;
+    display: block;
+    height: 30vh;
     flex-shrink: 0; /* this is so that the flex layout doesnt shrink the header when the window isn't tall enough to fit everything */
 
-	/* parallax effect in background */
-	background-image: url("/assets/images/dusk-gray.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
+    /* parallax effect in background */
+    background-image: url("/assets/images/dusk-gray.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 
     /* center content in header */
     position: relative;
 }
 
-.header--home {
+#header--home {
     height: 50vh;
     text-align: center;
 }
 
-.header-content {
-	display: block;
-	width: 80vw;
+#header__content {
+    display: block;
+    width: 80vw;
     /* center content in header */
     margin: 0;
     position: absolute;
@@ -106,10 +50,60 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#why {/* container around .b2b-container div. Button doesn't look correct without this for some reason, hence the name #why */
+
+body {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+main {
+    width: 80vw;
+    margin:  30px auto 0 auto;
+}
+
+article {
+    margin: 20px 0;
+}
+
+hr {
+    margin: 20px;
+}
+
+/* Custom Classes */
+.image-gallery {
+    margin: 10px 0;
+	
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding-left: 0;
+        margin: 0.75vmin;
+
+        &:after {
+            content: '';
+            display: block;
+            flex-grow: 10;
+        }
+    }
+
+    li {
+        border: 1px solid rgba($primary-colour, 0.2);
+        border-radius: 0.5vmin;
+        padding: 3px;
+        flex-grow: 1;
+        margin: 0.75vmin;
+    }
+
+    img {
+        max-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        vertical-align: bottom;
+        border-radius: 0.5vmin;
+    }
 }
 
 .b2b-container {
@@ -117,109 +111,103 @@ header {
     justify-content: center;
     width: 120px;
     margin: 0;
-    padding: 0;
-
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
+    transition: 0.5s;
 }
 
 .b2b-container:hover {
     background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
 }
 
-.b2b-icon-container {
-    position: relative;
-    height: 100%;
-    aspect-ratio: 1/1;
-
-    img {
-        padding: 15%;
-        position: absolute;
-    }
-}
-
 /* navigation.html */
 nav {
-	height: 100%;
-	width: 0; /* changed with JavaScript */
-	position: fixed;
-	z-index: 2;
-	top: 0;
-	right: 0;
-	overflow-x: hidden;
-	transition: 0.5s;
+    height: 100%;
+    width: 0; /* changed with JavaScript */
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
 
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.6);
-
-	a {
-		display: flex;
-		justify-content: space-between;
-		
-		padding: 11px;
-		transition: 0.5s;
-		height: 45px;
-		width: 100%;
-	}
-
-	.closebtn {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 45px;
-	}
-
-	a:hover, .closebtn:hover {
-		background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
-	}
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-#open-nav {
-	background-color: rgba(0, 0, 0, 0.6);
-	position: fixed;
-	top: 7px;
-	right: 7px;
-	z-index: 1;
-	display: block;
-
-	transition: 0.5s;
-	cursor: pointer;
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 4px;
-	padding: 3px 10px;
+.nav__links {
+    display: flex;
+    justify-content: space-between;
+	
+    padding: 11px;
+    transition: 0.5s;
+    height: 45px;
+    width: 100%;
 }
 
-#open-nav:hover {
-	background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
+#nav__closebtn {
+    transition: 0.5s;
+    padding: 11px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
 }
 
-.nav-links-icon {
-	width: 24px;
-	display: inline-block;
+.nav__links:hover, #nav__closebtn:hover {
+    background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
+}
+
+.nav__links__icon {
+    width: 24px;
+    display: inline-block;
+}
+
+#nav__openbtn {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 7px;
+    right: 7px;
+    z-index: 1;
+    display: block;
+
+    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 3px 10px;
+}
+
+#nav__openbtn:hover {
+    background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
 }
 
 /* footer.html */
 footer {
-	display: flex;
-	justify-content: space-between;
-	background: linear-gradient(100deg, #202020, #323232);
-	padding: 3% 10%;
-	margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(100deg, #202020, #323232);
+    padding: 3% 10%;
+    margin-top: 5%;
 }
 
-#footer-links {
-	display: inline-flex;
-	flex-direction: column;
-	a, a:hover, a:active, a:visited {
-		color: #c7bc87;
-	}
+#footer__links {
+    display: inline-flex;
+    flex-direction: column;
+    a:hover {
+        transition: 0.5s;
+        color: $primary_colour;
+    }
 }
 
-#blatant-advertising {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	text-align: right;
-	font-size: 85%;
-	width: 50%;
-	opacity: 50%;}
+#footer__watermark {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+    font-size: 85%;
+    width: 50%;
+    opacity: 50%;
+}

@@ -1,11 +1,11 @@
 <!-- credit to Tim Van Damme at css-tricks.com -->
 <!-- https://css-tricks.com/adaptive-photo-layout-with-flexbox -->
 <div class="image-gallery">
-	<ul>
-		{%- for item in site.data.galleries[include.gallery_id] -%}
-		<li>
-			<img src="/assets/images/gallery/{{ include.gallery_id }}/{{ item.image }}">
-		</li>
-		{%- endfor -%}
-	</ul>
+    <ul>
+        {%- for item in site.data.galleries[include.gallery_id] -%}
+        <li>
+            <img src="/assets/images/gallery/{{ include.gallery_id }}/{{ item.image }}">
+        </li>
+        {%- endfor -%}
+    </ul>
 </div>

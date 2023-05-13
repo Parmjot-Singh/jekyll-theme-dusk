@@ -11,4 +11,3 @@ summary: "A dark coloured Jekyll theme compatible with GitHub Pages, with emphas
 ##### Heading level 5
 ###### Heading level 6
 paragraph text
-

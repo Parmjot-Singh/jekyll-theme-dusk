@@ -6,7 +6,7 @@
         }
     }
 
-    #header-content {
+    #header__content {
         width: 80vw;
     }
 }
@@ -14,13 +14,13 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .image-gallery {
-    li {
+        li {
             height: 20vh;
         }
     }
-    
-    #header-content {
-	    width: 80vw;
+
+    #header__content {
+        width: 80vw;
     }
 }
 
@@ -32,18 +32,16 @@
         }
     }
 
-    #header-content {
+    #header__content {
         width: 80vw;
     }
-	
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    #header-content {
+    #header__content {
         width: 50vw;
     }
-
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

@@ -57,10 +57,9 @@ This theme has many features in it. They are written here so that it is easier t
 - ### Image Galleries
 
   *This one is a bit complicated, but is pretty cool in my opinion.*  
-  If you want to create a gallery, you will need to do a few things.
-  
-  **In this section, replace [GALLERY_NAME] with the name of a gallery. This must be the same for all parts if you want to use the gallery without issues.**
-  
+  If you want to create a gallery, you will need to do a few things.  
+  **In this section, replace [GALLERY_NAME] with the name of a gallery. This must be the same for all parts if you want to use the gallery without issues.**  
+
   1. Create the folders at the paths:
   ```
   /assets/images/gallery/
@@ -104,6 +103,7 @@ This theme has many features in it. They are written here so that it is easier t
   title: "Dusk"
   summary: "Dusk is a theme built for GitHub Pages."
   ```
+
   You do not need the title or summary variables, as the variables ```{{ site.title }}``` and ```{{ site.description }}``` can be set in your ```_config.yml``` file as well, which is the default. This does override the other though.
 
 - ### Blog Page
