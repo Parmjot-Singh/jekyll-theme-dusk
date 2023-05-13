@@ -1,7 +1,5 @@
 @use "sass:math";
 @import "css-reset";
-@import "include";
-@import "layout";
 @import "text";
 @import "device-support";
 @import "variables.scss";
@@ -38,6 +36,7 @@ article {
 	margin: 20px 0;
 }
 
+/* Custom Classes */
 .image-gallery {
 	ul {
 		display: flex;
@@ -63,3 +62,176 @@ article {
 		vertical-align: bottom;
 	}
 }
+
+/* layout */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+header {
+    flex-shrink: 0;
+}
+
+/* _include file formatting */
+/* header-home.html */
+.home { /* this is to make sure that this code only affects the header-home.html file, and none of the other headers. */
+    header {
+        height: 50vh;
+        text-align: center;
+    }
+
+    #header-content {
+        display: inline-flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: min(max(3rem, 9vw), 70px);
+        }
+    }
+}
+
+header {
+	display: block;
+	height: 30vh;
+
+	/* parallax effect in background */
+	background-image: url("/assets/images/dusk-gray.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+
+    /* center content in header */
+    position: relative;
+}
+
+#header-content {
+	display: block;
+	width: 80vw;
+    /* center content in header */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#why {/* container around .b2b-container div. Button doesn't look correct without this for some reason, hence the name #why */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.b2b-container {
+    display: inline-flex;
+    justify-content: center;
+    width: 120px;
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.b2b-container:hover {
+    background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
+}
+
+.b2b-icon-container {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    img {
+        padding: 15%;
+        position: absolute;
+    }
+}
+
+/* navigation.html */
+.sidenav {
+	height: 100%;
+	width: 0; /* changed with JavaScript */
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	overflow-x: hidden;
+	transition: 0.5s;
+
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.6);
+
+	a {
+		display: flex;
+		justify-content: space-between;
+		
+		padding: 11px;
+		transition: 0.5s;
+		height: 45px;
+		width: 100%;
+	}
+
+	.closebtn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 45px;
+	}
+
+	a:hover, .closebtn:hover {
+		background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
+	}
+}
+
+#open-nav {
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 7px;
+	right: 7px;
+	z-index: 1;
+	display: block;
+
+	transition: 0.5s;
+	cursor: pointer;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 4px;
+	padding: 3px 10px;
+}
+
+#open-nav:hover {
+	background: rgba(199, 188, 135, 0.2) url(/assets/images/noise.png);
+}
+
+.nav-links-icon {
+	width: 24px;
+	display: inline-block;
+}
+
+/* footer.html */
+footer {
+	display: flex;
+	justify-content: space-between;
+	background: linear-gradient(100deg, #202020, #323232);
+	padding: 3% 10%;
+	margin-top: 5%;
+}
+
+#footer-links {
+	display: inline-flex;
+	flex-direction: column;
+	a, a:hover, a:active, a:visited {
+		color: #c7bc87;
+	}
+}
+
+#blatant-advertising {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	text-align: right;
+	font-size: 85%;
+	width: 50%;
+	opacity: 50%;}
