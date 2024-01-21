@@ -19,4 +19,6 @@ spec.summary            = "A dark coloured Jekyll theme compatible with GitHub P
 
     spec.platform       = Gem::Platform::RUBY
     spec.add_runtime_dependency "jekyll", "> 3.5", "< 5.0"
+    # testing
+    spec.add_runtime_dependency "json", "> 0.1", "< 9.9"
 end
