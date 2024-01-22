@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
     spec.version        = "0.5.2" # Keep this at line 5 for GitHub release action
     spec.authors        = ["Parmjot Singh"]
     spec.email          = ["parmjotsinghrobot@gmail.com"]
-spec.summary            = "A dark coloured Jekyll theme compatible with GitHub Pages, with emphasis on elegance?"
+spec.summary            = "A dark Jekyll theme compatible with GitHub Pages, with emphasis on elegance. This theme is still in development, so expect issues."
     spec.homepage       = "https://github.com/Parmjot-Singh/jekyll-theme-dusk/"
     spec.license        = "MIT"
     spec.metadata = {

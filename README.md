@@ -1,5 +1,13 @@
-# jekyll-theme-dusk
-This theme was built for GitHub Pages.
+# Dusk
+
+### Jekyll Theme
+
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Parmjot-Singh/jekyll-theme-dusk/master/LICENSE.txt)
+[![Ruby gem](https://img.shields.io/gem/v/jekyll-theme-dusk?color=yellow
+)](https://rubygems.org/gems/jekyll-theme-dusk)
+[![GitHub Releases](https://img.shields.io/github/v/release/Parmjot-Singh/jekyll-theme-dusk?color=yellow)](https://github.com/Parmjot-Singh/jekyll-theme-dusk/releases/latest)
+
+A dark Jekyll theme compatible with GitHub Pages, with emphasis on elegance.
 
 ### WARNING
 This theme assumes that your images are stored at
@@ -11,22 +19,22 @@ It's good practice to put your assets in an assets folder, in my opinion at leas
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
-```
-ruby
-gem "jekyll-theme-dusk"
+```ruby
+
+gem "jekyll-theme-dusk", "~> 0.5.2"
 ```
 And add this line to your Jekyll site's `_config.yml`:
-```
-yaml
+```yaml
+
 theme: jekyll-theme-dusk
 ```
 And then execute:
 ```
-    $ bundle
+$ bundle
 ```
 Or install it yourself as:
 ```
-    $ gem install jekyll-theme-dusk
+$ gem install jekyll-theme-dusk
 ```
 ## Usage
 
