@@ -1,9 +1,29 @@
 /* Fonts */
 /* Display */
 @import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+@font-face {
+	font-family: "Chivo Mono";
+	font-style: normal;
+	font-display: swap;
+	src:
+		url("/assets/fonts/Chivo_Mono/ChivoMono-VariableFont_wght.woff2") format("woff2"),
+		url("/assets/fonts/Chivo_Mono/ChivoMono-VariableFont_wght.woff") format("woff"),
+		url("/assets/fonts/Chivo_Mono/ChivoMono-Italic-VariableFont_wght.woff2") format("woff2"),
+		url("/assets/fonts/Chivo_Mono/ChivoMono-Italic-VariableFont_wght.woff") format("woff");
+}
 
 /* Content */
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+@font-face {
+	font-family: "Titillium Web";
+	font-style: normal;
+	font-display: swap;
+	src:
+		url("/assets/fonts/Titillium_Web/TitilliumWeb-VF.woff2") format("woff2"),
+		url("/assets/fonts/Titillium_Web/TitilliumWeb-VF.woff") format("woff"),
+		url("/assets/fonts/Titillium_Web/TitilliumWeb-Italic-VF.woff2") format("woff2"),
+		url("/assets/fonts/Titillium_Web/TitilliumWeb-Italic-VF.woff") format("woff");
+}
 
 /* Text formatting */
 html {
