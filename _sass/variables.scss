@@ -4,11 +4,11 @@ $background-colour: #171717;        // Dark Gray
 
 /* Templates */
 @mixin display {
-    font-family: 'Chivo Mono', monospace;
+    font-family: "Chivo Mono", monospace;
     color: $primary-colour;
 }
 
 @mixin content {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Titillium Web", sans-serif;
     color: white;
 }

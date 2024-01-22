@@ -18,12 +18,12 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ "master" ]
   schedule:
-    - cron: '40 15 * * 6'
+    - cron: "40 15 * * 6"
 
 jobs:
   analyze:
     name: Analyze
-    runs-on: ${{ (matrix.language == 'ruby' && 'macos-latest') || 'ubuntu-latest' }}
+    runs-on: ${{ (matrix.language == "ruby" && "macos-latest") || "ubuntu-latest" }}
     permissions:
       actions: read
       contents: read
@@ -32,10 +32,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'ruby' ]
-        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
-        # Use only 'java' to analyze code written in Java, Kotlin or both
-        # Use only 'javascript' to analyze code written in JavaScript, TypeScript or both
+        language: [ "ruby" ]
+        # CodeQL supports [ "cpp", "csharp", "go", "java", "javascript", "python", "ruby" ]
+        # Use only "java" to analyze code written in Java, Kotlin or both
+        # Use only "javascript" to analyze code written in JavaScript, TypeScript or both
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
